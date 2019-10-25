@@ -15,6 +15,12 @@ nav {
         ul {
             .flex-layout(row, center, center);
 
+            li {
+                @media @mobile {
+                    padding-bottom: 10px;
+                }
+            }
+
             li a {
                 padding: 0 15px;
                 font-size: 1.5rem;
@@ -25,5 +31,10 @@ nav {
                 border-bottom: 1px dashed @shark;
             }
         } // end ul links
+        @media @mobile{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     } // end nav
 }
