@@ -5,3 +5,20 @@
     justify-content: @justify;
     align-items: @align;
 }
+
+.button(@bg-color, @color) {
+    background-color: @bg-color;
+    color: @color;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 120px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: .3s;
+
+    &:hover {
+        background-color: darken(@bg-color, 10%);
+    }
+}
