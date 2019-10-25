@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Bus Travel Agency - Solution</title>
 
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
@@ -67,29 +67,37 @@
         </section>
         <section class="content-pick">
 
-            <div class="destination">
+            <div id="funSun" class="destination">
                 <h4>Fun In The Sun</h4>
                 <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
-                <button class="btn">Sign Me Up!</button>
+                <button onclick="openForm('Fun In The Sun', '#funSun')" class="btn-primary">Sign Me Up!</button>
             </div>
-            <div class="destination">
+            <div id="mountExcursion" class="destination">
                 <h4>Mountain Excursion</h4>
                 <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
-                <button class="btn">Sign Me Up!</button>
+                <button onclick="openForm('Mountain Excursion', '#mountExcursion')" class="btn-primary">Sign Me Up!</button>
             </div>
-            <div class="destination">
+            <div id="islandGetway" class="destination">
                 <h4>Island Getaway</h4>
                 <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
-                <button class="btn">Sign Me Up!</button>
+                <button onclick="openForm('Island Getaway', '#islandGetway')" class="btn-primary">Sign Me Up!</button>
             </div>
         </section>
     </div>
     <!-- container -->
-
+    <!-- Form -->
+    <div id="vacationForm" class="display-none">
+        <form action="#">
+            <h4 class="title"></h4>
+        </form>
+        <div class="filter">
+            <button onclick="closeForm()" class="btn-close">&times;</button>
+        </div>
+    </div>
     <footer class="footer">
         <p>Copyright Fun Bus 2018</p>
     </footer>
-
+    <script src="js/main.js"></script>
 </body>
 
 </html>

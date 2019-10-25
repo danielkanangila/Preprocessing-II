@@ -176,12 +176,18 @@ button {
   width: 100%;
   margin: 0 auto;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .container {
     padding: 0 20px;
   }
 }
-.btn {
+.display-none {
+  display: none;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.btn-primary {
   background-color: #17A2B8;
   color: #FFEBCD;
   padding: 10px 20px;
@@ -194,8 +200,32 @@ button {
   transition: 0.3s;
   width: 100%;
 }
-.btn:hover {
+.btn-primary:hover {
   background-color: #117a8b;
+}
+.btn-close {
+  background-color: #212529;
+  color: #cccccc;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 120px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 40px;
+  height: 40px;
+  font-size: 36px;
+  opacity: 1;
+  position: absolute;
+  top: 18px;
+  padding: 1px;
+  right: 30px;
+  border-radius: 50%;
+}
+.btn-close:hover {
+  background-color: #0a0c0d;
 }
 nav {
   border-bottom: 2px dashed #C0C0C0;
@@ -209,7 +239,7 @@ nav .nav {
   justify-content: space-between;
   align-items: inherit;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   nav .nav {
     padding: 0 20px;
   }
@@ -227,7 +257,7 @@ nav .nav ul {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   nav .nav ul li {
     padding-bottom: 10px;
   }
@@ -240,7 +270,7 @@ nav .nav ul li a {
 nav .nav ul li a:hover {
   border-bottom: 1px dashed #212529;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   nav .nav {
     flex-direction: column;
     justify-content: center;
@@ -276,7 +306,7 @@ nav .nav ul li a:hover {
   width: 48%;
   padding-right: 1%;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .home .content-section .text-content {
     width: 100%;
   }
@@ -288,7 +318,7 @@ nav .nav ul li a:hover {
 .home .content-section .img-content img {
   border-radius: 10px;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .home .content-section .img-content {
     width: 100%;
   }
@@ -305,7 +335,7 @@ nav .nav ul li a:hover {
   padding-right: 1%;
   padding-left: 0;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .home .inverse-content {
     flex-direction: column-reverse;
   }
@@ -317,7 +347,7 @@ nav .nav ul li a:hover {
 .home .content-destination img {
   border-radius: 10px;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .home .content-destination {
     width: 100%;
   }
@@ -332,15 +362,85 @@ nav .nav ul li a:hover {
   width: 30%;
   margin-bottom: 30px;
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .home .content-pick .destination {
     width: 75%;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .home .content-pick {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+}
+.vacation-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  z-index: 1;
+  animation: bounce-in 2s;
+  -webkit-animation: bounce-in 2s;
+  -moz-animation: bounce-in 2s;
+}
+@-moz-keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.vacation-form form {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 50%;
+  height: 100px;
+  background-color: #FFFFFF;
+  z-index: 5;
+}
+.vacation-form .filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212529;
+  opacity: 0.9;
+  z-index: 2;
 }
