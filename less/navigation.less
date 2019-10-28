@@ -1,1 +1,40 @@
 // Navigation Styles here
+nav {
+    border-bottom: 2px dashed @navigation-border;
+
+    .nav {
+        .container();
+        .flex-layout(row, space-between, inherit);
+        .brand {
+            width: fit-content;
+            font-family: 'Indie Flower', cursive;
+            font-size: 3.2rem;
+            padding: 10px 0;
+            color: @shark;
+        } // end brand
+        ul {
+            .flex-layout(row, center, center);
+
+            li {
+                @media @mobile {
+                    padding-bottom: 10px;
+                }
+            }
+
+            li a {
+                padding: 0 15px;
+                font-size: 1.5rem;
+                color: @shark;
+            }
+
+            li a:hover {
+                border-bottom: 1px dashed @shark;
+            }
+        } // end ul links
+        @media @mobile{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    } // end nav
+}

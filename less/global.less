@@ -39,8 +39,30 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+
+  @media @mobile {
+    padding: 0 20px;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

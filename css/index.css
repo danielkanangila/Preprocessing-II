@@ -1,1 +1,521 @@
-/* LESS needs to be processed */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Indie Flower', cursive;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+}
+h4 {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+.display-none {
+  display: none;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.btn-primary {
+  background-color: #17A2B8;
+  color: #FFEBCD;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 120px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 100%;
+}
+.btn-primary:hover {
+  background-color: #117a8b;
+}
+.btn-close {
+  background-color: #212529;
+  color: #cccccc;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 120px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 40px;
+  height: 40px;
+  font-size: 36px;
+  opacity: 1;
+  position: absolute;
+  top: 18px;
+  padding: 1px;
+  right: 30px;
+  border-radius: 50%;
+}
+.btn-close:hover {
+  background-color: #0a0c0d;
+}
+form {
+  margin: 2rem 0;
+}
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1rem;
+}
+label,
+input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+input,
+textarea {
+  font-size: 1.5rem;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  appearance: none;
+  border-radius: 0;
+  padding: 5px;
+  cursor: text;
+  /** Overide the placeholder by the label  **/
+}
+input:focus,
+textarea:focus {
+  outline: 0;
+  border-bottom: 1px solid #0f44e0;
+}
+input:placeholder-shown + label,
+textarea:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+  font-size: 0.8rem;
+  padding: 0 5px;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label,
+input:focus + label,
+textarea:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+  color: #0f44e0;
+}
+textarea {
+  height: 150px;
+  border: 1px solid #ccc;
+}
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+nav {
+  border-bottom: 2px dashed #C0C0C0;
+}
+nav .nav {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: inherit;
+}
+@media screen and (max-width: 500px) {
+  nav .nav {
+    padding: 0 20px;
+  }
+}
+nav .nav .brand {
+  width: fit-content;
+  font-family: 'Indie Flower', cursive;
+  font-size: 3.2rem;
+  padding: 10px 0;
+  color: #212529;
+}
+nav .nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  nav .nav ul li {
+    padding-bottom: 10px;
+  }
+}
+nav .nav ul li a {
+  padding: 0 15px;
+  font-size: 1.5rem;
+  color: #212529;
+}
+nav .nav ul li a:hover {
+  border-bottom: 1px dashed #212529;
+}
+@media screen and (max-width: 500px) {
+  nav .nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.footer {
+  width: 100%;
+  border-top: 2px dashed silver;
+  background: #FFEBCD;
+}
+.footer p {
+  text-align: center;
+  color: #212529;
+  font-size: 1.6rem;
+  padding: 20px;
+}
+.header-welcome {
+  border-bottom: 2px dashed #C0C0C0;
+  padding-bottom: 10px;
+}
+.header-welcome img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.home .content-section {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.home .content-section .text-content {
+  width: 48%;
+  padding-right: 1%;
+}
+@media screen and (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
+}
+.home .content-section .img-content {
+  width: 48%;
+  padding-left: 1%;
+}
+.home .content-section .img-content img {
+  border-radius: 10px;
+}
+@media screen and (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
+}
+.home .inverse-content {
+  padding-bottom: 30px;
+  border-bottom: 2px dashed #C0C0C0;
+}
+.home .inverse-content .text-content {
+  padding-left: 1%;
+  padding-right: 0;
+}
+.home .inverse-content .img-content {
+  padding-right: 1%;
+  padding-left: 0;
+}
+@media screen and (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
+}
+.home .content-destination {
+  width: 75%;
+  margin: 0 auto 30px;
+}
+.home .content-destination img {
+  border-radius: 10px;
+}
+@media screen and (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
+.home .content-pick {
+  padding-top: 30px;
+  border-top: 2px dashed #C0C0C0;
+  display: flex;
+  justify-content: space-between;
+}
+.home .content-pick .destination {
+  width: 30%;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .home .content-pick {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.vacation-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: bounce-in 2s;
+  -webkit-animation: bounce-in 2s;
+  -moz-animation: bounce-in 2s;
+}
+@-moz-keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.vacation-form h4 {
+  color: #000000;
+}
+.vacation-form form {
+  width: 40%;
+  background-color: #ffffff;
+  padding: 25px;
+  z-index: 5;
+}
+@media screen and (max-width: 500px) {
+  .vacation-form form {
+    width: 98%;
+    height: 80%;
+  }
+}
+.vacation-form .filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212529;
+  opacity: 0.9;
+  z-index: 2;
+}
