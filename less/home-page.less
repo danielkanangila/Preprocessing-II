@@ -103,16 +103,23 @@
   height: 100vh;
   background: transparent;
   z-index: 1;
+  .flex-layout(column, center, center);
   .animation.bounce-in();
 
+  h4 {
+    color: #000000;
+  }
+
   form {
-    position: absolute;
-    top: 20%;
-    left: 25%;
-    width: 50%;
-    height: 100px;
-    background-color: @white;
+    width: 40%;
+    background-color: #ffffff;
+    padding: 25px;
     z-index: 5;
+
+    @media @mobile {
+      width: 98%;
+      height: 80%;
+    }
   }
 
   .filter {
